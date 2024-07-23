@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="flex justify-between mt-5 shadow-xl sticky top-0 z-20 bg-white p-2">
+        <h1 class="font-bold text-3xl pl-3">Nostra</h1>
+        <div class=" w-10 flex items-center   md:hidden lg:hidden h-10">
+            <i id="menubar" class="fa-solid fa-bars cursor-pointer " style="color: #000000;"></i>
+        </div>
+
+        <ul class=" flex p-2 gap-5 mr-10 text-xl text-gray-700 hidden md:flex">
+            <li> <a class="hover:cursor-pointer hover:underline mr-5" href="index.html">Home</a></li>
+            <li><a class="hover:cursor-pointer hover:underline mr-5" href="">New Arrival</a</li>
+            <li><a class="hover:cursor-pointer hover:underline mr-5" href="">Most wanted</a></li>
+            <li><a class="hover:cursor-pointer hover:underline mr-5" href="collection.html">Collections</a></li>
+            <li><a class="hover:cursor-pointer hover:underline mr-5" href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- sidenavbar -->
+    <section class=" hidden bg-green-700 fixed  top-0 left-0 z-20 " style="width:50%; height: 100% ;" id="sidemenubar">
+        <div>
+            <p><i id="closebar" class="fa-solid fa-xmark cursor-pointer"></i></p>
+        </div>
+        <ul class=" flex-col  gap-10  text-xl   text-white p-10  ">
+            <li style="margin-bottom: 30px;"><a class="hover:cursor-pointer hover:underline " href="index.html">Home</a>
+            </li>
+            <li style="margin-bottom: 30px;"><a class="hover:cursor-pointer hover:underline " href="">New Arrival</a</li>
+            <li style="margin-bottom: 30px;"><a class="hover:cursor-pointer hover:underline " href="">Most wanted</a>
+            </li>
+            <li style="margin-bottom: 30px;"><a class="hover:cursor-pointer hover:underline"
+                    href="collection.html">Collections</a>
+            </li>
+            <li style="margin-bottom: 30px;"><a class="hover:cursor-pointer hover:underline" href="contact.html">Contact Us</a></li>
+        </ul>
+    </section>
+
+    <!-- product -->
+    <div class="hidden md:block lg:block">
+        <form class="mt-20 flex justify-between items-center p-3 m-auto"
+            style="width: 80%; border: solid black 2px ; border-radius: 20px ;">
+            <input id="search" type="text " class="bg-transparent outline-none" placeholder="search"
+                style="border:none; width: 100%;">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+        <div class="grid grid-cols-3 ml-10 mr-10 mt-20  font-bold text-center" id="products">
+            <div class="mr-10 mb-20">
+                <img src="./image/t1.jpg" alt="">
+                <h1 class="text-3xl font-bold">Floral Summer Shirt</h1>
+                <p>₹220</p>
+            </div>
+            <div class="mr-10 mb-20">
+                <img src="./image/t2.jpg" alt="">
+                <h1 class="text-3xl">Summer Green</h1>
+                <p>₹260</p>
+            </div>
+            <div class="mr-10 mb-20">
+                <img src="./image/t3.jpg" alt="">
+                <h1 class="text-3xl">Party Floral Shirt</h1>
+                <p>₹399</p>
+            </div>
+            <div class="mr-10 mb-20">
+                <img src="./image/t4.jpg" alt="">
+                <h1 class="text-3xl">Floral Summer Shirt</h1>
+                <p>₹399</p>
+            </div>
+            <div class="mr-10">
+                <img src="./image/t5.jpg" alt="">
+                <h1 class="text-3xl">Beach Shirt</h1>
+                <p>₹579</p>
+            </div>
+            <div class="mr-10">
+                <img src="./image/t6.jpg" alt="">
+                <h1 class="text-3xl">Shirt Party Red</h1>
+                <p>₹579</p>
+            </div>
+            <div class="mr-10 mb-20">
+                <img src="./image/t7.jpg" alt="">
+                <h1 class="text-3xl">Party Floral Shirt</h1>
+                <p>₹399</p>
+            </div>
+            <div class="mr-10">
+                <img src="./image/t8.jpg" alt="">
+                <h1 class="text-3xl">Shirt Party Red</h1>
+                <p>₹579</p>
+            </div>
+            <div class="mr-10">
+                <img src="./image/t9.jpg" alt="">
+                <h1 class="text-3xl">Floral Summer Shirt</h1>
+                <p>₹220</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- moblie product -->
+    <div class="md:hidden lg:hidden">
+        <form class="mt-20 flex justify-between items-center p-3 m-auto"
+            style="width: 80%; border: solid black 1px ; border-radius: 20px ;">
+            <input type="text " id="search-bar" class="bg-transparent outline-none" placeholder="search "
+                style="border:none; width: 100%;">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+        <div class="grid grid-cols-2 ml-10 mr-10 mt-20 text-center" id="product">
+            <div class="mr-10 mb-20">
+                <img src="./image/t1.jpg" alt="">
+                <h1>Floral Summer Shirt</h1>
+                <p>₹220</p>
+            </div>
+            <div class="mr-10 mb-20">
+                <img src="./image/t2.jpg" alt="">
+                <h1>Summer Green</h1>
+                <p>₹260</p>
+            </div>
+            <div class="mr-10 mb-20">
+                <img src="./image/t3.jpg" alt="">
+                <h1>Party Floral Shirt</h1>
+                <p>₹399</p>
+            </div>
+            <div class="mr-10 mb-20">
+                <img src="./image/t4.jpg" alt="">
+                <h1>Floral Summer Shirt</h1>
+                <p>₹399</p>
+            </div>
+            <div class="mr-10">
+                <img src="./image/t5.jpg" alt="">
+                <h1>Beach Shirt</h1>
+                <p>₹579</p>
+            </div>
+            <div class="mr-10">
+                <img src="./image/t6.jpg" alt="">
+                <h1>Shirt Party Red</h1>
+                <p>₹579</p>
+            </div>
+            <div class="mr-10 mb-20">
+                <img src="./image/t7.jpg" alt="">
+                <h1>Party Floral Shirt</h1>
+                <p>₹399</p>
+            </div>
+            <div class="mr-10">
+                <img src="./image/t8.jpg" alt="">
+                <h1>Shirt Party Red</h1>
+                <p>₹579</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- News -->
+    <section class="">
+        <div class="text-center">
+            <div class=" mt-10">
+                <h1 class="text-4xl font-bold ">Join our News Letter</h1>
+                <p class="text-3xl mt-5">Signup for our email newspaper to get exclusive discounts, updates, and more
+                </p>
+            </div>
+            <div>
+                <input type="text" class="p-5  mb-5 mt-5" style="width: 80vw; border: solid black 1px;">
+            </div>
+            <div>
+                <button class="bg-black text-white p-3 mb-10 " style="border-radius: 10px;">Subscribe<i
+                        class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <section>
+        <div class="bg-black font-bold text-white  ">
+            <div class="">
+                <h1 class="ml-10 text-3xl mb-5 pt-10">Nostra</h1>
+                <p class="ml-10 text-2xl w-82">The Standard chunk of Lorem ipsum used since the 1500s is reprodused
+                    below for those interest</p>
+
+            </div>
+            <div class="flex ml-5">
+                <i class="icon fa-brands fa-instagram m-5 text-xl" style="color: #ffffff;"></i>
+                <i class="icon fa-brands fa-twitter m-5 text-xl" style="color: #ffffff;"></i>
+                <i class="icon fa-brands fa-facebook  m-5 text-xl" style="color: #ffffff;"></i>
+            </div>
+            <div>
+                <p class="ml-10">&copy;2023 Nostra.com</p>
+            </div>
+        </div>
+    </section>
+    <!-- script -->
+    <script defer src="collection.js">
+
+    </script>
+
+</body>
+</html>
